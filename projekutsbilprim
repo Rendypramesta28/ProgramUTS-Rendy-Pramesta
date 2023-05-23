@@ -1,0 +1,36 @@
+/*
+ * NAMA : RENDY PRAMESTA SYAH
+ * NPM  :227064516024
+ */
+package programbilprimuts;
+
+import java.util.Scanner;
+public class ProgrambilprimUTS {
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan angka: ");
+        int number = scanner.nextInt();
+        boolean isPrime = true;
+
+        // Percabangan untuk memeriksa apakah angka kurang dari atau sama dengan 1
+        if (number <= 1) {
+            isPrime = false;
+        } else {
+            // Perulangan untuk memeriksa apakah angka habis dibagi oleh bilangan lainnya
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        // Percabangan untuk menampilkan hasil apakah bilangan merupakan bilangan prima atau bukan
+        if (isPrime) {
+            System.out.println(number + " adalah bilangan prima.");
+        } else {
+            System.out.println(number + " bukan bilangan prima.");
+        }
+    }
+}
+    
